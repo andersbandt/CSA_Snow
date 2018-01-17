@@ -9,8 +9,8 @@ Ground(){
 
 // Shows the sun
 void display(){
-fill(232, 244, 66);
-ellipse(x, y, diameter, diameter);
+fill(239, 231, 230);
+rect(0,310,700,90);
 }
 
 

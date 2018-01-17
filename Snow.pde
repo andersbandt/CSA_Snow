@@ -1,47 +1,31 @@
-class Snow{
+Sun sun;
+Snowman man;
+Ground g;
 
-//Instance Varibles
-float x;
-float y;
-float diameter;
-
-// Constructor
-Snow(float d){
-x = width/2;
-y = height;
-diameter = d;
+void settings(){
+size(700, 400);
 }
 
-boolean clickedBubble(){
-if(dist(x, y, mouseX, mouseY)<diameter){
-return true;
-}
-else {
-return false;
-}
-}
-
-// Makes snowflakes go down
-void fall(){
-y++;
-
-// can you make the bubbles go up unvenly?
-
-
+void setup(){
+  sun = new Sun(100,100,75);
+  man = new Snowman(75,360,75);
+  g = new Ground();
+  
+snowArray=new Snow[400];
+  for (int i=0; i<snowArray.length; i++) {
+    snowArray[i]= new Snow();
+  }
 }
 
-// show the bubbles
-void display(){
-stroke(0);
-fill(127, 100);
-ellipse(x, y, diameter, diameter);
-}
-
-// if the bubbles go to the top - pause it here
-void top(){
-if(y < 0){
-y = 0;
-}
-}
-
+void draw(){
+  background(43, 35, 34);
+  g.display();
+  sun.display();
+  man.display();
+  
+  for (int i=0; i<snowArray.length; i++) {
+    snowArray[i].addPhysics();
+    snowArray[i].snow();
+  }
+  
 }
