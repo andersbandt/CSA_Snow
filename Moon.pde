@@ -22,7 +22,7 @@ void display(){
   
   fill(255,255,200);
       arc(beginX + x, beginY + y, 75, 75, 0, PI*4);
-      fill(43, 35, moon_b);
+      fill(0, 0, moon_b);
       noStroke();
       arc(beginX + x + 15, beginY + y + 15, 75, 75, 0, PI*4);
       moon_b = 82.5 + 82.5*sin(pct+PI*(.75));
