@@ -27,7 +27,13 @@ ellipse(x, y -diameter/1.5 + 20, 4, 4);
 fill(224, 68, 11);
 triangle(x - 15, y- 80+12, x+3, y - 88+12, x -5, y - 90+12);
 
+
+if (mousePressed) {
+  
+
 }
 
+
+}
 
 }

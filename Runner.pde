@@ -3,10 +3,10 @@ Snowman man;
 Ground ground;
 Moon moon;
 
+
 float background_b = 82.5;
 float pct = 0.0;
-float step = 0.01;
-boolean sky = true;
+float step = 0.005;
 
 void settings(){
 size(700, 400);
@@ -18,7 +18,7 @@ void setup(){
   ground = new Ground();
   moon = new Moon();
   
-snowArray=new Snow[400];
+snowArray=new Snow[300];
   for (int i=0; i<snowArray.length; i++) {
     snowArray[i]= new Snow();
   }
@@ -36,23 +36,8 @@ void draw(){
     snowArray[i].snow();
   }
   
-  if (sky) {
-    background_b += .1;
-    
-  }
-  else {
-    background_b -= .1;
-  }
-      if (background_b > 200) {
-        sky = false;
-      }
-      
-  if (background_b < 35) {
-        sky = true;
-      }    
-      
-      
-  
+  pct += step;
+  background_b = 82.5 + 82.5*sin(pct+PI*(.75));
   
   
 }

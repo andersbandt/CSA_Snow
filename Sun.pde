@@ -1,10 +1,10 @@
 class Sun{
 
 float beginX = 350;  // Initial x-coordinate
-float beginY = 275;  // Initial y-coordinate
+float beginY = 310;  // Initial y-coordinate
 float x = 0.0;        // Current x-coordinate
 float y = 0.0;        // Current y-coordinate
-float step = 0.01;    // Size of each step along the path
+float step = 0.005;    // Size of each step along the path
 float pct = 0.0;      // Percentage traveled (0.0 to 1.0)
 
 // Constructor
@@ -19,7 +19,7 @@ void display(){
     y = 210*sin(pct-QUARTER_PI);
   }
   fill(232, 244, 66);
-  ellipse(beginX + x, beginY + y, 40, 40);
+  ellipse(beginX + x, beginY + y, 75, 75);
 }
 
 }

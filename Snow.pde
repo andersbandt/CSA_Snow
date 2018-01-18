@@ -24,14 +24,14 @@ class Snow {
   void addPhysics() {
     yUpdate=acceleration+velocity;
 
-    if (mousePressed) {
-      xUpdate+=wind;
-      if (xUpdate>5) {
-        xUpdate*=-1;
-      } else if (xUpdate<-5) {
-        xUpdate*=-1;
-      }
-    }
+  //  if (mousePressed) {
+ //     xUpdate+=wind;
+  //    if (xUpdate>5) {
+ //       xUpdate*=-1;
+   //   } else if (xUpdate<-5) {
+ //       xUpdate*=-1;
+ //     }
+ //   }
   }
   //makes the snow
   void snow() {
