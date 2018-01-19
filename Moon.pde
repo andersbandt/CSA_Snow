@@ -4,7 +4,7 @@ float beginX = 350;  // Initial x-coordinate
 float beginY = 310;  // Initial y-coordinate
 float x = 0.0;        // Current x-coordinate
 float y = 0.0;        // Current y-coordinate
-float step = 0.005;    // Size of each step along the path
+float step = 0.003;    // Size of each step along the path
 float pct = 0.0;      // Percentage traveled (0.0 to 1.0)
 float moon_b = 82.5;
 

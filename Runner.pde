@@ -4,12 +4,13 @@ Ground ground;
 Moon moon;
 Tree tree;
 Fire fire;
-Stickman stanley;
+Abominable abominable;
 
+ArrayList particles = new ArrayList();
 
 float background_b = 82.5;
 float pct = 0.0;
-float step = 0.005;
+float step = 0.003;
 
 void settings(){
 size(700, 400);
@@ -22,18 +23,18 @@ void setup(){
   ground = new Ground();
   moon = new Moon();
   tree = new Tree();
-  stanley = new Stickman(30);
+  abominable = new Abominable();
   
 snowArray=new Snow[300];
   for (int i=0; i<snowArray.length; i++) {
     snowArray[i]= new Snow();
   }
+  
+
+
 }
 
 void draw(){
-  //new stuff
-  stanley.stickman();
-  
   background(0, 0, background_b);
   sun.display();
   moon.display();
@@ -50,10 +51,9 @@ void draw(){
   background_b = 82.5 + 82.5*sin(pct+PI*(.75));
   
   if (background_b < 82.5) {
-    fire.create_fire();
-    fire.update_fire();
-    fire.draw_fire();
+    abominable.display();
   }
+  
   
   
 }

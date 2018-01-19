@@ -35,7 +35,12 @@ class Tree {
     
     for (int i = 0; i < 16; i ++) {
       tree_b -= 1;
-    }
+    }   
+  }
+  
+  void destroy() {
+    
+    
   }
   
   

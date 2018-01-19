@@ -41,8 +41,8 @@ void create_fire(){
   for(int flame=currentflame ; flame<nextflame ; flame++){
     fire[flame][0]=1;
 //edited    
-    fire[flame][1]=450;
-    fire[flame][2]=250;
+    fire[flame][1]=450; //xpos
+    fire[flame][2]=250; //ypos
 //not edited
     fire[flame][3]=random(0,PI*2);//angle
     fire[flame][4]=random(5,30);//size
