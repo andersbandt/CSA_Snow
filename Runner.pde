@@ -3,7 +3,6 @@ Snowman man;
 Ground ground;
 Moon moon;
 Tree tree;
-Fire fire;
 Abominable abominable;
 
 ArrayList particles = new ArrayList();
@@ -17,7 +16,6 @@ size(700, 400);
 }
 
 void setup(){
-  fire = new Fire();
   sun = new Sun();
   man = new Snowman(75,360,75);
   ground = new Ground();
