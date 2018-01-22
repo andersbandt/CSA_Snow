@@ -1,6 +1,6 @@
 class Tree {
   
-  float tree_r = 56;
+  float tree_r = 56;  //starting rgb vallues for the tree (green)
   float tree_g = 130;
   float tree_b = 22;
   
@@ -10,7 +10,7 @@ class Tree {
   
   
   
-  void display() {
+  void display() { //declares the different shapes that make the tree
     fill(71, 46, 26);
     rect(450,250,35,100);
     fill(tree_r,tree_g,tree_b);
@@ -24,7 +24,7 @@ class Tree {
      
   }
   
-  void fire() {
+  void fire() { //method for simulating the tree being on fire
     for (int i = 0; i < 183; i ++) {
       tree_r += 1;
     }
@@ -37,11 +37,7 @@ class Tree {
       tree_b -= 1;
     }   
   }
-  
-  void destroy() {
-    
-    
-  }
+ 
   
   
   
